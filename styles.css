@@ -72,7 +72,7 @@ p {
 .container {
     display: grid;
     height: 0px;
-    /* transition: 0.5s; */
+    /* transition: 0.2s; */
     overflow: hidden;
 }
 
@@ -130,6 +130,7 @@ body {
     color: #ffffff;
     max-width: 1000px;
     margin: 7.5vh auto auto auto;
+    padding: 0 50px 0 50px;
 }
 
 header {
@@ -138,7 +139,7 @@ header {
 }
 
 header > h3 {
-    margin-top: -1.25rem;
+    margin-top: -1.75rem;
     margin-right: -0.5%;
     letter-spacing: 1.15px;
 }
@@ -155,6 +156,7 @@ li {
 .container {
     grid-template-columns: 50px 75px 600px;
     margin-left: 7.5%;
+    grid-gap: 10px;
 }
 
 .last {
@@ -214,4 +216,139 @@ img {
     color: var(--color-tan);
     font-size: 3rem;
     margin: 1.5rem;
+}
+
+#carBtn {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .carousel {
+        width: 800px;
+        height: 517.64px;
+    }
+
+    img {
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.27rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        grid-template-columns: 50px 75px auto;
+        margin-left: 20px;
+    }
+
+    .carousel {
+        width: 600px;
+        height: 388.234px;
+    }
+
+    img {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 5rem;
+        word-spacing: -5px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+        margin-top: 10;
+    }
+
+    header > h3 {
+        margin-top: -20px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .carousel {
+        width: 500px;
+        height: 323.52px;
+    }
+
+    img {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .curly {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        word-spacing: 0;
+        letter-spacing: -1px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 10;
+        margin-left: 65px;
+    }
+
+    header > h3 {
+        margin-top: -15px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .carousel {
+        width: 500px;
+        height: 323.52px;
+    }
+
+    img {
+        width: 100vw;
+    }
+
+    /* #lightbox.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    } */
 }

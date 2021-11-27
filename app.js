@@ -31,6 +31,7 @@ const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
 const lightbox = document.getElementById('lightbox');
 const carouselBtn = document.querySelector('#carBtn');
+const mobileImg = document.querySelector('#mobileImages');
 
 let counter = 0;
 
@@ -77,3 +78,7 @@ lightbox.addEventListener('click', e => {
     if (e.target == e.currentTarget) 
     return lightbox.classList.remove('active')
 })
+
+// for (let i = 0; i < images.length; i++) {
+//     mobileImg.insertAdjacentHTML('afterend', images[i].img);
+// }
