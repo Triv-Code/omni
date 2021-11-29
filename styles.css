@@ -70,34 +70,45 @@ p {
 
 /* Hide / Show Animation */
 .container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     height: 0px;
-    /* transition: 0.2s; */
+    transition: 1s;
     overflow: hidden;
 }
 
-#menu-1:checked ~ .container {
-    height: 100%;
+#menu-about:checked ~ .about {
+    height: 345px;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 }
 
-#menu-1 {
+#menu-about {
     width: 200px;
 }
 
-#menu-2:checked ~ .container {
-    height: 100%;
+#menu-project:checked ~ .projects {
+    height: 770px;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 }
 
-#menu-2 {
+#menu-project {
     width: 200px;
 }
 
-#menu-3:checked ~ .container {
-    height: 100%;
+#menu-contact:checked ~ .contact {
+    height: 260px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+#menu-contact {
+    width: 200px;
+}
+
+#menu-creative:checked ~ .creative {
+    height: 210px;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 }
@@ -153,10 +164,19 @@ li {
     margin-bottom: 5vh;
 }
 
-.container {
-    grid-template-columns: 50px 75px 600px;
+.content {
+    display: grid;
+    /* grid-template-columns: 50px 75px 600px; */
     margin-left: 7.5%;
-    grid-gap: 10px;
+    /* grid-gap: 5px; */
+}
+
+.content-about {
+    margin-left: 7.5%;
+}
+
+.about-text {
+    margin-left: 7.5%;
 }
 
 .last {
@@ -223,6 +243,28 @@ img {
 }
 
 @media screen and (max-width: 1200px) {
+    #menu-about:checked ~ .about {
+        height: 370px;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+
+    #menu-project:checked ~ .projects {
+        height: 820px;
+    }
+
+    #menu-contact:checked ~ .contact {
+        height: 260px;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+
+    #menu-creative:checked ~ .creative {
+        height: 210px;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+
     .carousel {
         width: 800px;
         height: 517.64px;
@@ -234,25 +276,59 @@ img {
 }
 
 @media screen and (max-width: 1000px) {
-    h1 {
+    /* h1 {
         font-size: 6rem;
-    }
+    } */
 
     h2 {
         font-size: 2.2rem;
     }
 
-    h3 {
+    /* h3 {
         font-size: 1.27rem;
-    }
+    } */
 
     p {
         font-size: 1.2rem;
     }
 
     .container {
-        grid-template-columns: 50px 75px auto;
+        /* grid-template-columns: 50px 75px auto; */
         margin-left: 20px;
+    }
+
+    #menu-about:checked ~ .about {
+        height: 420px;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+
+    #menu-project:checked ~ .projects {
+        height: 865px;
+    }
+
+    #menu-contact:checked ~ .contact {
+        height: 260px;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+
+    #menu-creative:checked ~ .creative {
+        height: 210px;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .content-about {
+        margin-left: 7.5%;
+    }
+
+    .about-text {
+        margin-left: 7.5%;
     }
 
     .carousel {
@@ -265,27 +341,45 @@ img {
     }
 }
 
-@media screen and (max-width: 800px) {
-    h1 {
-        font-size: 5rem;
-        word-spacing: -5px;
+@media screen and (max-width: 900px) {
+    #menu-about:checked ~ .about {
+        height: 470px;
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
     }
+}
 
+@media screen and (max-width: 800px) {
     h2 {
         font-size: 1.8rem;
     }
 
-    h3 {
-        font-size: 1rem;
-        margin-top: 10;
-    }
-
     header > h3 {
-        margin-top: -20px;
+        margin-top: -30px;
     }
 
     p {
         font-size: 1rem;
+    }
+
+    .curly {
+        display: none;
+    }
+
+    #menu-about:checked ~ .about {
+        height: auto;
+    }
+
+    #menu-project:checked ~ .projects {
+        height: auto;
+    }
+
+    #menu-creative:checked ~ .creative {
+        height: auto;
+    }
+
+    #menu-contact:checked ~ .contact {
+        height: auto;
     }
 
     .carousel {
@@ -311,9 +405,7 @@ img {
 
     h1 {
         text-align: center;
-        font-size: 3rem;
         word-spacing: 0;
-        letter-spacing: -1px;
     }
 
     h2 {
@@ -322,13 +414,14 @@ img {
 
     h3 {
         text-align: center;
-        font-size: 1rem;
         margin-top: 10;
-        margin-left: 65px;
+        margin-left: 30px;
     }
 
     header > h3 {
-        margin-top: -15px;
+        margin-top: -30px;
+        margin-right: 27px;
+        white-space: nowrap;
     }
 
     p {
@@ -343,12 +436,4 @@ img {
     img {
         width: 100vw;
     }
-
-    /* #lightbox.active {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-    } */
 }

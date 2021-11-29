@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/93c39929eb.js" crossorigin="anonymous"></script>
     <script src="app.js" defer></script>
@@ -15,81 +16,98 @@
 </head>
 <body>
     <header>
-        <h1>jacob <span class="tan">clark</span></h1>
+        <h1>.<span class="tan">clark</span></h1>
         <h3>software developer</h3>
     </header>
     <nav>
         <ul type="none">
             <li>
-                <label for="menu-1" class="icon">
+                <label for="menu-about" class="icon">
+                    <h2 class="noselect"><span class="grey">const</span><span class="tan"> about</span>  = <span class="orange">[</span></h2>
+                </label>
+                <input type="checkbox" id="menu-about">
+                <div class="container about">
+                    <div class="content-about">
+                        <p class="curly">{</p>
+                        <p class="about-text">Hello, I’m Jacob. I’m a creative based out of Louisville, KY. Creative is kind of a generic term, but I struggle to define myself any other way. You see, I have a lot of interests and these interests turn into hobbies, sometimes obsessions. I’ve played music most of my life, having picked up bass at fourteen. Even younger than that was drawing. Drawing would turn into painting in highschool, where I learned that I love portraits. That would lead to photography, which would take me to college, where I also fell in love with design. After a lot of soul searching, I finally decided to give coding a try and with that, I think I found my calling. So now, I’m working hard to develop my coding skills, marry them to my design skills, and start a new career for myself. I’m enjoying the challenge and looking forward to the future. You should check out some of my work below. If you like what you see, feel free to reach out to me. My contact info is down there too. Okay, goodbye!</p>
+                        <p class="curly">},</p>
+                    </div>
+                </div>
+                <h2><span class="orange">]</span>;</h2>
+            </li>
+            <li>
+                <label for="menu-project" class="icon">
                     <h2 class="noselect"><span class="grey">const</span><span class="tan"> projects</span>  = <span class="orange">[</span></h2>
                 </label>
-                <input type="checkbox" id="menu-1">
-                <div class="container">
-                    <p class="curly">{</p>
-                    </br>
-                    <p class="key red">name:</p>
-                    <p class="val">'PokeDex'</p>
-                    <p class="key red">github:</p> 
-                    <p class="val">'<a href="https://github.com/Triv-Code/PokeDex" target="_blank" rel="noopener noreferrer">github.com/Triv-Code/PokeDex</a>',</p>
-                    <p class="key red">desc:</p>
-                    <p class="val">'It's a Pokedex! Give it a name (... or use the Pokemon's ID) and it will pull up some information on that Pokemon. All the info is pulled from the PokeAPI and includes things like the name/ID, type(s), a fun CSS/JS graph for the Pokemon's stats, and some other basic information.'</p>
-                    <p class="curly">},{</p>
-                </div>
-                <div class="container">
-                    <p class="key red">name:</p>
-                    <p class="val">'Potion Comparison'</p>
-                    <p class="key red">github:</p> 
-                    <p class="val">'<a href="https://github.com/Triv-Code/buy.make.ah" target="_blank" rel="noopener noreferrer">github.com/Triv-Code/buy.make.ah</a>', </p>
-                    <p class="key red">desc:</p>
-                    <p class="val">'This is a make/buy comparison tool for commonly used potions in World of Warcraft. Using Blizzard's API the script gathers auction house data on the material cost to craft and the cost of buying the potion itself. Comparing the cost, the scipt determines if you should buy or craft, as well as, how much you'll save (converted to WoW's currency).'</p>
-                    <p class="curly">},{</p>
-                </div>
-                <div class="container last">
-                    <p class="key red">name:</p>
-                    <p class="val">'Pet Shop'</p>
-                    <p class="key red">github:</p> 
-                    <p class="val">'<a href="https://github.com/Triv-Code/FEWD-PetShop" target="_blank" rel="noopener noreferrer">github.com/Triv-Code/FEWD-PetShop</a>',</p>
-                    <p class="key red">desc:</p>
-                    <p class="val">'This reponsive website was built according to a mockup supplied by a mentor of mine. Some features are: mobile first design, responsive menu and images, and haevy use of Grid and Flexbox.'</p>
-                    <p class="curly">},</p>
+                <input type="checkbox" id="menu-project">
+                <div class="container projects">
+                    <div class="content">
+                        <p class="curly">{</p>
+                        </br>
+                        <p class="key red">name:</p>
+                        <p class="val">'PokeDex'</p>
+                        <p class="key red">github:</p> 
+                        <p class="val">'<a href="https://github.com/Triv-Code/PokeDex" target="_blank" rel="noopener noreferrer">github.com/Triv-Code/PokeDex</a>',</p>
+                        <p class="key red">desc:</p>
+                        <p class="val">'It's a Pokedex! Give it a name (... or use the Pokemon's ID) and it will pull up some information on that Pokemon. All the info is pulled from the PokeAPI and includes things like the name/ID, type(s), a fun CSS/JS graph for the Pokemon's stats, and some other basic information.'</p>
+                        <p class="curly">},{</p>
+                    </div>
+                    <div class="content">
+                        <p class="key red">name:</p>
+                        <p class="val">'Potion Comparison'</p>
+                        <p class="key red">github:</p> 
+                        <p class="val">'<a href="https://github.com/Triv-Code/buy.make.ah" target="_blank" rel="noopener noreferrer">github.com/Triv-Code/buy.make.ah</a>', </p>
+                        <p class="key red">desc:</p>
+                        <p class="val">'This is a make/buy comparison tool for commonly used potions in World of Warcraft. Using Blizzard's API the script gathers auction house data on the material cost to craft and the cost of buying the potion itself. Comparing the cost, the scipt determines if you should buy or craft, as well as, how much you'll save (converted to WoW's currency).'</p>
+                        <p class="curly">},{</p>
+                    </div>
+                    <div class="content">
+                        <p class="key red">name:</p>
+                        <p class="val">'Pet Shop'</p>
+                        <p class="key red">github:</p> 
+                        <p class="val">'<a href="https://github.com/Triv-Code/FEWD-PetShop" target="_blank" rel="noopener noreferrer">github.com/Triv-Code/FEWD-PetShop</a>',</p>
+                        <p class="key red">desc:</p>
+                        <p class="val">'This reponsive website was built according to a mockup supplied by a mentor of mine. Some features are: mobile first design, responsive menu and images, and haevy use of Grid and Flexbox.'</p>
+                        <p class="curly">},</p>
+                    </div>
                 </div>
                 <h2><span class="orange">]</span>;</h2>  
             </li>
             <li>
-                <label for="menu-3" class="icon">
+                <label for="menu-creative" class="icon">
                     <h2 class="noselect"><span class="grey">const</span><span class="tan"> creative</span> = <span class="orange">[</span></h2>
                 </label>
-                <input type="checkbox" id="menu-3">
-                <div class="container">
-                <!-- <p class="carousel-btn" id="carBtn">This is carousel?</p> -->
-                <p  class="curly">{</p>
-                </br>
-                <p class="key red">portraits:</p>
-                <p class="val" id="carBtn">'Monochrome Series'</p>
-                <p  class="curly">},{</p>
-                </br>
-                <p class="key red">logos:</p>
-                <p class="val" id="">'Personal, Friends, School, Guilds',</p>
-                <p  class="curly">},</p>
+                <input type="checkbox" id="menu-creative">
+                <div class="container creative">
+                    <div class="content">
+                        <p class="curly">{</p>
+                        </br>
+                        <p class="key red">portraits:</p>
+                        <p class="val" id="carBtn">'Monochrome Series',</p>
+                        <p class="key red">logos:</p>
+                        <p class="val" id="">'Personal, Friends, School, Guilds',</p>
+                        <p class="curly">},</p>
+                    </div>
                 </div>
                 <h2><span class="orange">]</span>;</h2>
             </li> 
             <li>
-                <label for="menu-2" class="icon">
+                <label for="menu-contact" class="icon">
                     <h2 class="noselect"><span class="grey">const</span><span class="tan"> contact</span> = <span class="orange">[</span></h2>
                 </label>
-                <input type="checkbox" id="menu-2">
-                <div class="container">
-                    <p class="curly">{</p>
-                    </br>
-                    <p class="key red">github:</p>
-                    <p class="val"><a href="https://github.com/Triv-Code" target="_blank" rel="noopener noreferrer">'github.com/Triv-Code'</a>,</p>
-                    <p class="key red">linkedin:</p>
-                    <p class="val"><a href="https://www.linkedin.com/in/jacob-clark-134992217/" target="_blank" rel="noopener noreferrer">'linkedin.com/in/jacob-clark-134992217'</a>,</p>
-                    <p class="key red">email:</p>
-                    <p class="val"><a href="mailto:yaybass@gmail.com">'yaybass@gmail.com'</a>,</p>
-                    <p class="curly">},</p>
+                <input type="checkbox" id="menu-contact">
+                <div class="container contact">
+                    <div class="content">
+                        <p class="curly">{</p>
+                        </br>
+                        <p class="key red">github:</p>
+                        <p class="val"><a href="https://github.com/Triv-Code" target="_blank" rel="noopener noreferrer">'github.com/Triv-Code'</a>,</p>
+                        <p class="key red">linkedin:</p>
+                        <p class="val"><a href="https://www.linkedin.com/in/jacob-clark-134992217/" target="_blank" rel="noopener noreferrer">'linkedin.com/in/jacob-clark-134992217'</a>,</p>
+                        <p class="key red">email:</p>
+                        <p class="val"><a href="mailto:yaybass@gmail.com">'yaybass@gmail.com'</a>,</p>
+                        <p class="curly">},</p>
+                    </div>
                 </div>
                 <h2><span class="orange">]</span>;</h2>
             </li>
