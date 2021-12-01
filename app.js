@@ -29,6 +29,8 @@ const images = [
 const carousel = document.querySelector('.carousel');
 const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
+const upBtn = document.querySelector('#upBtn');
+const downBtn = document.querySelector('#downBtn');
 const lightbox = document.getElementById('lightbox');
 const carouselBtn = document.querySelector('#carBtn');
 const mobileImg = document.querySelector('#mobileImages');
@@ -58,6 +60,8 @@ function prev() {
 
 nextBtn.addEventListener('click', next);
 prevBtn.addEventListener('click', prev);
+upBtn.addEventListener('click', prev);
+downBtn.addEventListener('click', next);
 
 document.onkeydown = function(e) {
     switch (e.keyCode) {
@@ -65,6 +69,12 @@ document.onkeydown = function(e) {
             prev();
             break;
         case 39:
+            next();
+            break;
+        case 38:
+            prev();
+            break;
+        case 40:
             next();
             break;
     }
