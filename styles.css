@@ -31,6 +31,10 @@ h2 {
     font-size: 2.5rem;
 }
 
+.bracket {
+    /* font-size: 2rem; */
+}
+
 h3 {
     font-family: "Red Hat Display", sans-serif;
     font-weight: var(--font-regular);
@@ -166,9 +170,9 @@ li {
 
 .content {
     display: grid;
-    grid-template-columns: 50px 75px auto;
+    grid-template-columns: 50px 90px auto;
     margin-left: 7.5%;
-    gap: 15px;
+    /* gap: 15px; */
 }
 
 .content-about {
@@ -427,6 +431,10 @@ li {
     .logo_img {
         width: 500px;
     }
+
+    .content {
+        grid-template-columns: 20px 90px auto;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -458,6 +466,10 @@ li {
 
     .logo_img {
         width: 400px;
+    }
+
+    .content {
+        grid-template-columns: 10px 90px auto;
     }
 }
 
@@ -509,5 +521,9 @@ li {
 
     .logo_img {
         width: 350px;
+    }
+
+    .content {
+        grid-template-columns: 0px 90px auto;
     }
 }
