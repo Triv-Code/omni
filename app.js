@@ -26,14 +26,36 @@ const images = [
     },
 ]
 
+const logos = [
+    {
+        name: '[alt]px',
+        img: '<img src="./img/logos/altpx_Logo.png">',
+    },{
+        name: 'OCD',
+        img: '<img src="./img/logos/OCD_Logo.jpg">',
+    },{
+        name: 'RedDawg',
+        img: '<img src="./img/logos/RedDawg_logo.jpg">',
+    },
+]
+
 const carousel = document.querySelector('.carousel');
+const carouselContainer = document.querySelector('.carousel-container');
 const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
 const upBtn = document.querySelector('#upBtn');
 const downBtn = document.querySelector('#downBtn');
-const lightbox = document.getElementById('lightbox');
 const carouselBtn = document.querySelector('#carBtn');
-const mobileImg = document.querySelector('#mobileImages');
+
+// const logoCarousel = document.querySelector('.logo-carousel');
+const logoContainer = document.querySelector('.logo-container');
+// const logoPrevBtn = document.querySelector('#logoPrevBtn');
+// const logoNextBtn = document.querySelector('#logoNextBtn');
+// const logoUpBtn = document.querySelector('#logoUpBtn');
+// const logoDownBtn = document.querySelector('#logoDownBtn');
+const logoBtn = document.querySelector('#logoBtn');
+
+const lightbox = document.getElementById('lightbox');
 
 let counter = 0;
 
@@ -58,10 +80,35 @@ function prev() {
 
 }
 
+// function nextLogo() {
+//     if (counter == logos.length - 1) {
+//         counter = 0
+//         logoCarousel.innerHTML = logos[counter].img;
+//     } else {
+//         counter ++;
+//         logoCarousel.innerHTML = logos[counter].img;
+//     }
+// }
+
+// function prevLogo() {
+//     if (counter == 0) {
+//         counter = logos.length - 1;
+//         logoCarousel.innerHTML = logos[counter].img;
+//     } else {
+//         counter --;
+//         logoCarousel.innerHTML = logos[counter].img;
+//     }
+
+// }
+
 nextBtn.addEventListener('click', next);
 prevBtn.addEventListener('click', prev);
 upBtn.addEventListener('click', prev);
 downBtn.addEventListener('click', next);
+// logoNextBtn.addEventListener('click', nextLogo);
+// logoPrevBtn.addEventListener('click', prevLogo);
+// logoUpBtn.addEventListener('click', prevLogo);
+// logoDownBtn.addEventListener('click', nextLogo);
 
 document.onkeydown = function(e) {
     switch (e.keyCode) {
@@ -81,6 +128,14 @@ document.onkeydown = function(e) {
 };
 
 carouselBtn.addEventListener('click', e => {
+    carouselContainer.classList.remove('hide');
+    logoContainer.classList.add('hide');
+    lightbox.classList.add('active');
+})
+
+logoBtn.addEventListener('click', e => {
+    carouselContainer.classList.add('hide');
+    logoContainer.classList.remove('hide');
     lightbox.classList.add('active');
 })
 
@@ -89,6 +144,3 @@ lightbox.addEventListener('click', e => {
     return lightbox.classList.remove('active')
 })
 
-// for (let i = 0; i < images.length; i++) {
-//     mobileImg.insertAdjacentHTML('afterend', images[i].img);
-// }
