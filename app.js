@@ -59,47 +59,7 @@ const lightbox = document.getElementById('lightbox');
 
 let counter = 0;
 
-function next() {
-    if (counter == images.length - 1) {
-        counter = 0
-        carousel.innerHTML = images[counter].img;
-    } else {
-        counter ++;
-        carousel.innerHTML = images[counter].img;
-    }
-}
 
-function prev() {
-    if (counter == 0) {
-        counter = images.length - 1;
-        carousel.innerHTML = images[counter].img;
-    } else {
-        counter --;
-        carousel.innerHTML = images[counter].img;
-    }
-
-}
-
-// function nextLogo() {
-//     if (counter == logos.length - 1) {
-//         counter = 0
-//         logoCarousel.innerHTML = logos[counter].img;
-//     } else {
-//         counter ++;
-//         logoCarousel.innerHTML = logos[counter].img;
-//     }
-// }
-
-// function prevLogo() {
-//     if (counter == 0) {
-//         counter = logos.length - 1;
-//         logoCarousel.innerHTML = logos[counter].img;
-//     } else {
-//         counter --;
-//         logoCarousel.innerHTML = logos[counter].img;
-//     }
-
-// }
 
 nextBtn.addEventListener('click', next);
 prevBtn.addEventListener('click', prev);
